@@ -26,6 +26,7 @@
         <button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='/registry'">
       Реєстр видачі
     </button><br>
+    </div>
     <p></p><br>
     <button class="btn btn-lg" type="submit">Вийти з акаунту</button>
 </form>

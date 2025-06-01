@@ -7,10 +7,11 @@ use App\Models\RegistryModel;
 
 class RegistryController extends Controller
 {
-    public function registry(){
+    public function registry()
+    {
 
-        $registryBefore = RegistryModel::first()->value('created_at');
-        $registryAfter = RegistryModel::latest()->value('created_at');
+        $registryBefore = RegistryModel::first() ? RegistryModel::first()->created_at : null;
+        $registryAfter = RegistryModel::latest()->first() ? RegistryModel::latest()->first()->created_at : null;
 
         return view('registry', [
             'before' => $registryBefore,
@@ -18,29 +19,30 @@ class RegistryController extends Controller
         ]);
     }
 
-    public function getRegistry(Request $request){
+    public function getRegistry(Request $request)
+    {
 
-    $before = $request->input('before');
-    $after = $request->input('after');
+        $before = $request->input('before');
+        $after = $request->input('after');
 
-    $registry = RegistryModel::all();
+        $registry = RegistryModel::all();
 
-    $registryList = collect();
+        $registryList = collect();
 
-    foreach($registry as $material){
-        if($material->created_at == $before || $after){
-            $registryList->push($material);
+        foreach ($registry as $material) {
+            if ($material->created_at == $before || $after) {
+                $registryList->push($material);
+            }
         }
-    }
 
-    $region = null;
-    foreach($registryList as $regionReg){
-        $region = $regionReg->region;
-    }
+        $region = null;
+        foreach ($registryList as $regionReg) {
+            $region = $regionReg->region;
+        }
 
-    return view('registry_materials',[
-        'materials' => $registryList,
-        'region' => $region
-    ]);
+        return view('registry_materials', [
+            'materials' => $registryList,
+            'region' => $region
+        ]);
     }
 }
