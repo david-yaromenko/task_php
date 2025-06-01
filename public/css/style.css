@@ -1,0 +1,177 @@
+
+body {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.body-doc {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 15px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 25px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Стили кнопки */
+.btn-primary {
+  display: inline-block;
+  font-weight: 400;
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0.5rem 3rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 8px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.body-act {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.signature {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+
+/* Стили нижнего текста */
+.text-muted {
+  color: #6c757d !important;
+  font-size: 0.875rem;
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 0.5rem !important;
+}
+
+/*act*/
+.html-act,
+.body-act {
+  height: 100%;
+  margin: 0;
+  padding-top: 20px;
+  font-family: 'Times New Roman', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.document {
+  width: 800px;
+  padding: 40px;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.signature {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media print {
+
+  html,
+  body {
+    display: block;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .document {
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+}
